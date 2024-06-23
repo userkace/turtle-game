@@ -99,7 +99,7 @@ let dino = {
 
 let trees = [];
 let gameSpeed = 2;
-let minTreeInterval = 500; // Minimum interval between trees in milliseconds
+let minTreeInterval = 900; // Minimum interval between trees in milliseconds
 let maxTreeInterval = 3000; // Maximum interval between trees in milliseconds
 let nextTreeTime = Date.now() + getRandomInterval(minTreeInterval, maxTreeInterval);
 let gameStarted = false;
