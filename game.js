@@ -294,6 +294,22 @@ function drawGround() {
     ctx.fillRect(0, canvas.height - 100, canvas.width, 3);
 }
 
+// Event listener for visibility change
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // Tab or window is not visible
+        restartGame();
+    }
+});
+
+function handleVisibilityChange() {
+    if (!gameOver) {
+        gameOver = true;
+        cancelAnimationFrame(animationFrameId); // Stop the game loop
+        // Optionally pause any ongoing game state here
+    }
+}
+
 // Add event listener for mouse click / touch on the canvas
 document.addEventListener('touchstart', () => {
     jump();
